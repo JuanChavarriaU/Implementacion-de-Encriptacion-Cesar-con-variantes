@@ -2,7 +2,7 @@ import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
 
-abecedario = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+abecedario = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
 
 nuevoCifrado = []
 texto_descifrado = ""
@@ -18,7 +18,8 @@ def Encriptar():
         posicion = abecedario.find(letra)
         print(posicion)
         if posicion == -1:
-            pass
+            if letra == ' ':
+                texto_cifrado += ' '
         else:
             posicion_final = posicion + int(numeroSaltos.get())
             texto_cifrado += (abecedario[posicion_final])
@@ -74,7 +75,8 @@ def Desencriptar():
         posicion = abecedario.find(letra)
         print(posicion)
         if posicion == -1:
-            pass
+            if letra == ' ':
+                texto_descifrado += ' '
         else:
             posicion_final = posicion - int(numeroSaltos.get())
             texto_descifrado += (abecedario[posicion_final])
