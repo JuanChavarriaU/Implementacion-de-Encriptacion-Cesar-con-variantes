@@ -3,9 +3,11 @@ Autores:
 @Daavd92
 @johannpoty
 @Jclark083
-@gsantimate
+@Giabsn
 @JuanChavarriaU
 """
+
+
 import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
