@@ -36,16 +36,19 @@ def Encriptar():
         # Busca la posición de la letra actual en el alfabeto
         posicion = abecedario.find(letra)
         # Verifica si la letra no está en el alfabeto
-        if posicion == -1:
-            # Verifica si es un espacio en blanco
-            if letra == ' ':
-                # Agrega un espacio en blanco a la cadena cifrada
-                texto_cifrado += ' '
+        if letra in abecedario:
+            if posicion == -1:
+                # Verifica si es un espacio en blanco
+                if letra == ' ':
+                    # Agrega un espacio en blanco a la cadena cifrada
+                    texto_cifrado += ' '
+            else:
+                # Calcula la posición final de la letra cifrada
+                posicion_final = posicion + int(numeroSaltos.get())
+                # Agrega la letra cifrada correspondiente a la cadena cifrada
+                texto_cifrado += (abecedario[posicion_final])
         else:
-            # Calcula la posición final de la letra cifrada
-            posicion_final = posicion + int(numeroSaltos.get())
-            # Agrega la letra cifrada correspondiente a la cadena cifrada
-            texto_cifrado += (abecedario[posicion_final])
+            texto_cifrado += letra
 
     texto_cifrado = list(texto_cifrado)  # texto cifrado cesar
     # Imprime el texto cifrado resultante
@@ -142,16 +145,20 @@ def Desencriptar():
         # Busca la posición de la letra en el alfabeto
         posicion = abecedario.find(letra)
         # Verifica si la letra no está en el alfabeto
-        if posicion == -1:
-            # Verifica si es un espacio en blanco
-            if letra == ' ':
-                # Agrega un espacio en blanco al texto descifrado
-                texto_descifrado += ' '
+        if letra in abecedario:
+            if posicion == -1:
+                # Verifica si es un espacio en blanco
+                if letra == ' ':
+                    # Agrega un espacio en blanco al texto descifrado
+                    texto_descifrado += ' '
+            else:
+                # Calcula la posición final de la letra descifrada
+                posicion_final = posicion - int(numeroSaltos.get())
+                # Agrega la letra descifrada correspondiente al texto descifrado
+                texto_descifrado += (abecedario[posicion_final])
         else:
-            # Calcula la posición final de la letra descifrada
-            posicion_final = posicion - int(numeroSaltos.get())
-            # Agrega la letra descifrada correspondiente al texto descifrado
-            texto_descifrado += (abecedario[posicion_final])
+            texto_descifrado += letra
+
     print("La cadena de texto descifrada es:", texto_descifrado)
 
     labelDescifrado = ctk.CTkLabel(master=frame, text="Texto Descifrado: " + texto_descifrado, fg_color="transparent")
