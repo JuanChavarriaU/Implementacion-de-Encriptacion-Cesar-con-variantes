@@ -12,7 +12,7 @@ import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
 
-abecedario = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+abecedario = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
 nuevoCifrado = []
 texto_descifrado = ""
 
@@ -31,6 +31,7 @@ def Encriptar():
     print("Proceso de encriptación:")
     print("La cadena de texto a encriptar es", texto)
     # Itera sobre cada carácter en la lista de texto
+    #formula de cesar x = (x + n) mod 54 no hay diferecia con la funcion find ya que ambos tiene el mismo tiempo de complejidad
     for letra in texto:
         # Busca la posición de la letra actual en el alfabeto
         posicion = abecedario.find(letra)
@@ -116,7 +117,7 @@ def Desencriptar():
     # Convierte los números enteros octales en la lista en cadenas con prefijo '0o'
     lista_octales = [str(valor) for valor in lista_entero_octal]
     descifradoDoble = ['0o' + valor_octal for valor_octal in lista_octales]
-
+    nuevoCifrado.clear()
     """
     Esta sección adicional del código realiza la etapa final del descifrado del texto original. 
     Toma los números octales cifrados en la etapa anterior, los convierte en valores decimales enteros y, 
@@ -155,7 +156,7 @@ def Desencriptar():
 
     labelDescifrado = ctk.CTkLabel(master=frame, text="Texto Descifrado: " + texto_descifrado, fg_color="transparent")
     labelDescifrado.pack(pady=14, padx=14)
-    nuevoCifrado.clear()
+
 
 
 root = ctk.CTk()
