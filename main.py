@@ -14,6 +14,7 @@ abecedario = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
 nuevoCifrado = []
 texto_descifrado = ""
 
+
 def Encriptar():
     """
     Este código realiza un cifrado César básico en el que cada letra del texto original se desplaza un
@@ -45,7 +46,7 @@ def Encriptar():
 
     texto_cifrado = list(texto_cifrado)  # texto cifrado cesar
     # Imprime el texto cifrado resultante
-    print("La cadena encriptada es:",texto_cifrado)
+    print("La cadena encriptada es:", texto_cifrado)
     """
     Este código realiza una etapa adicional de cifrado después del cifrado César básico. 
     Toma el texto cifrado resultante y lo convierte en una lista de números octales que representan 
@@ -83,13 +84,15 @@ def Encriptar():
         nuevoCifrado.append(num)
     print("La cadena en el sistema octal desplazada es:", nuevoCifrado)
 
-    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado César: "+str(texto_cifrado), fg_color="transparent")
+    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado César: " + str(texto_cifrado), fg_color="transparent")
     labelCifrado.pack(pady=10, padx=10)
 
-    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado Octal: "+str(lista_octales_enteros), fg_color="transparent")
+    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado Octal: " + str(lista_octales_enteros),
+                                fg_color="transparent")
     labelCifrado.pack(pady=11, padx=11)
 
-    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado Octal desplazado: "+str(nuevoCifrado), fg_color="transparent")
+    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado Octal desplazado: " + str(nuevoCifrado),
+                                fg_color="transparent")
     labelCifrado.pack(pady=13, padx=13)
 
 
@@ -126,7 +129,7 @@ def Desencriptar():
         caracter = chr(valorOctal)
         # Agrega el carácter descifrado a la lista descifradoOctal
         descifradoOctal.append(caracter)
-    print("La cadena desencriptada de Octal a Cesar es:",descifradoOctal)
+    print("La cadena desencriptada de Octal a Cesar es:", descifradoOctal)
     """
     Esta sección final del código realiza la etapa de descifrado César básico utilizando el resultado del descifrado del sistema octal.
     """
@@ -146,9 +149,9 @@ def Desencriptar():
             posicion_final = posicion - int(numeroSaltos.get())
             # Agrega la letra descifrada correspondiente al texto descifrado
             texto_descifrado += (abecedario[posicion_final])
-    print("La cadena de texto descifrada es:",texto_descifrado)
+    print("La cadena de texto descifrada es:", texto_descifrado)
 
-    labelDescifrado = ctk.CTkLabel(master=frame, text="Texto Descifrado: "+texto_descifrado, fg_color="transparent")
+    labelDescifrado = ctk.CTkLabel(master=frame, text="Texto Descifrado: " + texto_descifrado, fg_color="transparent")
     labelDescifrado.pack(pady=14, padx=14)
     nuevoCifrado.clear()
 
@@ -156,11 +159,13 @@ def Desencriptar():
 root = ctk.CTk()
 # ancho x alto
 root.geometry("800x700")
+root.title("OctaCode")
+root.iconbitmap('Logo_de_FISC.ico')
 
 frame = ctk.CTkFrame(master=root)
 frame.pack(pady=20, padx=60, fill="both", expand=True)
 
-label = ctk.CTkLabel(master=frame, text="Cesar Cypher System")
+label = ctk.CTkLabel(master=frame, text="OctaCode Cypher System")
 label.pack(pady=12, padx=10)
 
 textoParaCifrar = ctk.CTkEntry(master=frame, placeholder_text="Ingrese frase", width=350)
