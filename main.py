@@ -1,3 +1,14 @@
+"""
+Autores:
+@Daav92
+@johannpoty
+@Jclark083
+@gsantimate
+@JuanChavarriaU
+
+"""
+
+
 import customtkinter as ctk
 
 ctk.set_appearance_mode("dark")
