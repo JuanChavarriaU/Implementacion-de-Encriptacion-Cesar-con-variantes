@@ -1,6 +1,6 @@
 """
 Autores:
-@Daav92
+@Daavd92
 @johannpoty
 @Jclark083
 @gsantimate
@@ -83,13 +83,13 @@ def Encriptar():
         nuevoCifrado.append(num)
     print("La cadena en el sistema octal desplazada es:", nuevoCifrado)
 
-    labelCifrado = ctk.CTkLabel(master=frame, text=str(texto_cifrado), fg_color="transparent")
+    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado César: "+str(texto_cifrado), fg_color="transparent")
     labelCifrado.pack(pady=10, padx=10)
 
-    labelCifrado = ctk.CTkLabel(master=frame, text=str(lista_octales_enteros), fg_color="transparent")
+    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado Octal: "+str(lista_octales_enteros), fg_color="transparent")
     labelCifrado.pack(pady=11, padx=11)
 
-    labelCifrado = ctk.CTkLabel(master=frame, text=str(nuevoCifrado), fg_color="transparent")
+    labelCifrado = ctk.CTkLabel(master=frame, text="Cifrado Octal desplazado: "+str(nuevoCifrado), fg_color="transparent")
     labelCifrado.pack(pady=13, padx=13)
 
 
@@ -148,7 +148,7 @@ def Desencriptar():
             texto_descifrado += (abecedario[posicion_final])
     print("La cadena de texto descifrada es:",texto_descifrado)
 
-    labelDescifrado = ctk.CTkLabel(master=frame, text=texto_descifrado, fg_color="transparent")
+    labelDescifrado = ctk.CTkLabel(master=frame, text="Texto Descifrado: "+texto_descifrado, fg_color="transparent")
     labelDescifrado.pack(pady=14, padx=14)
     nuevoCifrado.clear()
 
