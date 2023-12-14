@@ -1,5 +1,9 @@
 # Parcial-3-Seg
-Proyecto para el curso de Seguridad informática para la computación
-#codigo sin refactorizar, sin clases. 
-#para su ejecución, es necesaria la libreria customtinker. 
-#Algoritmo de cifrado cesar + cifrado octal, con desplazamiento variable. 
+- Proyecto para el curso de Seguridad informática para la computación
+##Proposito
+- Implementación de Algoritmo de cifrado cesar + cifrado octal, con desplazamiento variable.
+##Requerimientos 
+- Libreria customtinker.
+##Mejoras pendientes
+- Código sin refactorizar.
+- Sin clases. 
