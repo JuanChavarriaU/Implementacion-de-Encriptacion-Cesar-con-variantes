@@ -1,9 +1,9 @@
 # Parcial-3-Seg
 - Proyecto para el curso de Seguridad informática para la computación
-##Proposito
+## Proposito
 - Implementación de Algoritmo de cifrado cesar + cifrado octal, con desplazamiento variable.
-##Requerimientos 
+## Requerimientos 
 - Libreria customtinker.
-##Mejoras pendientes
+## sMejoras pendientes
 - Código sin refactorizar.
 - Sin clases. 
