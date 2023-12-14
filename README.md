@@ -4,6 +4,6 @@
 - Implementación de Algoritmo de cifrado cesar + cifrado octal, con desplazamiento variable.
 ## Requerimientos 
 - Libreria customtinker.
-## sMejoras pendientes
+## Mejoras pendientes
 - Código sin refactorizar.
 - Sin clases. 
