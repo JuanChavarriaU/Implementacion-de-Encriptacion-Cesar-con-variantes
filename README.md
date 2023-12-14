@@ -1,4 +1,4 @@
-# Parcial-3-Seg
+# Implementación de algotimo césar con modificaciones adicionales.
 - Proyecto para el curso de Seguridad informática para la computación
 ## Proposito
 - Implementación de Algoritmo de cifrado cesar + cifrado octal, con desplazamiento variable.
